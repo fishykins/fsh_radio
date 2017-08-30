@@ -1,0 +1,647 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, broadcast">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-155.542297,-471.271362,-65.542236,-421.271606,0.000000,"init"};
+item1[] = {"pre_checks",2,250,427.047729,-190.777130,517.047729,-140.777130,0.000000,"pre" \n "checks"};
+item2[] = {"start",2,250,76.709686,-118.955750,166.709717,-68.955750,0.000000,"start"};
+item3[] = {"local_audio",4,218,197.694855,-120.551071,287.694855,-70.551071,1.000000,"local" \n "audio"};
+item4[] = {"in_Vehicle",4,218,74.716064,-51.916077,164.716064,-1.916077,3.000000,"in" \n "Vehicle"};
+item5[] = {"vehicle_data",2,250,197.473999,-51.644531,287.474030,-1.644531,0.000000,"vehicle" \n "data"};
+item6[] = {"true",8,218,313.157379,-51.412407,403.157410,-1.412415,1.000000,"true"};
+item7[] = {"has_music",4,218,426.950714,-116.684303,516.950684,-66.684296,0.000000,"has" \n "music"};
+item8[] = {"stop_music",2,250,316.454803,-262.844971,406.454834,-212.844971,0.000000,"stop" \n "music"};
+item9[] = {"twiddle_thumbs",2,250,77.455719,-270.488342,167.455750,-220.488373,0.000000,"twiddle" \n "thumbs"};
+item10[] = {"wait",4,218,77.794312,-187.910812,167.794312,-137.910812,0.000000,"wait"};
+item11[] = {"get_player__musi",2,4346,431.938263,-331.705200,521.938293,-281.705170,0.000000,"get" \n "player " \n "music"};
+item12[] = {"out_of_sync",4,218,432.116486,-396.336884,522.116516,-346.336884,2.000000,"out of" \n "sync"};
+item13[] = {"in_sync",8,218,323.505554,-470.167389,413.505554,-420.167328,0.000000,"in sync"};
+item14[] = {"update_music_pla",2,250,548.386536,-472.724396,638.386597,-422.724396,0.000000,"update" \n "music" \n "playing"};
+item15[] = {"not_playing",4,218,544.064941,-194.067200,634.064941,-144.067230,3.000000,"not playing"};
+item16[] = {"process_data",2,250,314.524017,-117.498932,404.524048,-67.498932,0.000000,"process" \n "data"};
+item17[] = {"music_playing",8,218,430.878662,-259.732788,520.878662,-209.732788,0.000000,"music" \n "playing"};
+item18[] = {"no_audio_signal",8,218,-44.899017,-116.797417,45.100983,-66.797424,0.000000,"no audio" \n "signal"};
+item19[] = {"no_music",8,218,315.536041,-192.516571,405.536041,-142.516571,0.000000,"no" \n "music"};
+item20[] = {"exit",1,250,-158.389893,-279.563385,-68.389893,-229.563400,0.000000,"exit"};
+item21[] = {"post_init",2,250,167.983704,-469.065521,257.983704,-419.065674,0.000000,"post" \n "init"};
+item22[] = {"true",8,218,170.157837,-542.037720,260.157837,-492.037872,0.000000,"true"};
+item23[] = {"already_running",4,218,-155.430847,-371.061676,-65.430847,-321.061676,1.000000,"already" \n "running"};
+item24[] = {"pre_exit",2,250,-158.167114,-117.513153,-68.167114,-67.513153,0.000000,"pre" \n "exit"};
+item25[] = {"true",8,218,-157.255157,-199.597229,-67.255127,-149.597229,0.000000,"true"};
+item26[] = {"max_idle",4,218,-45.942352,-53.522095,44.057648,-3.522095,2.000000,"max idle"};
+item27[] = {"Settings",2,250,23.245300,-545.185669,113.245323,-495.185669,0.000000,"Settings"};
+item28[] = {"true",8,218,-157.738159,-542.282166,-67.738159,-492.282166,0.000000,"true"};
+item29[] = {"failed__play",4,218,549.560547,-555.278381,639.560547,-505.278320,1.000000,"failed " \n "play"};
+item30[] = {"clear_data",2,250,430.128906,-557.035889,520.128906,-507.035828,0.000000,"clear" \n "data"};
+item31[] = {"checks",2,250,553.547974,-702.988342,643.547974,-652.988342,0.000000,"checks"};
+item32[] = {"IS_LOCAL_",4,218,336.381653,-701.874756,426.381653,-651.874756,1.000000,"IS" \n "LOCAL" \n ""};
+item33[] = {"play_next__song",2,250,323.017456,-554.869690,413.017456,-504.869690,0.000000,"play next " \n "song"};
+item34[] = {"default",8,218,433.271301,-631.713257,523.271301,-581.713257,0.000000,"default"};
+link0[] = {0,23};
+link1[] = {0,28};
+link2[] = {1,15};
+link3[] = {1,17};
+link4[] = {2,3};
+link5[] = {2,4};
+link6[] = {2,18};
+link7[] = {2,26};
+link8[] = {3,16};
+link9[] = {4,5};
+link10[] = {5,6};
+link11[] = {6,16};
+link12[] = {7,1};
+link13[] = {8,13};
+link14[] = {9,10};
+link15[] = {10,2};
+link16[] = {11,12};
+link17[] = {11,13};
+link18[] = {12,14};
+link19[] = {13,9};
+link20[] = {14,13};
+link21[] = {14,29};
+link22[] = {15,14};
+link23[] = {16,7};
+link24[] = {16,19};
+link25[] = {17,11};
+link26[] = {18,24};
+link27[] = {19,8};
+link28[] = {21,13};
+link29[] = {22,21};
+link30[] = {23,20};
+link31[] = {24,25};
+link32[] = {25,20};
+link33[] = {26,24};
+link34[] = {27,22};
+link35[] = {28,27};
+link36[] = {29,31};
+link37[] = {30,13};
+link38[] = {31,32};
+link39[] = {31,34};
+link40[] = {32,33};
+link41[] = {33,13};
+link42[] = {34,30};
+globals[] = {0.000000,0,0,0,0,640,480,1,60,6316128,1,-388.485687,838.513123,40.077881,-869.380981,1194,885,1};
+window[] = {2,-1,-1,-32000,-32000,985,225,1665,225,3,1212};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "broadcast";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "already_running">*/
+                                class already_running
+                                {
+                                        itemno = 23;
+                                        priority = 1.000000;
+                                        to="exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"fsh_radio_client_receiving"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="Settings";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "pre_checks">*/
+                class pre_checks
+                {
+                        name = "pre_checks";
+                        itemno = 1;
+                        init = /*%FSM<STATEINIT""">*/"_maxIdle = _maxIdleLimmit;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "not_playing">*/
+                                class not_playing
+                                {
+                                        itemno = 15;
+                                        priority = 3.000000;
+                                        to="update_music_pla";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(call CBA_fnc_isMusicPlaying)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "music_playing">*/
+                                class music_playing
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="get_player__musi";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "start">*/
+                class start
+                {
+                        name = "start";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"fsh_radio_client_audioUpdate = false;" \n
+                         "_data = fsh_radio_audioData;" \n
+                         "" \n
+                         "_loop = _loop + 1;" \n
+                         "_vehicle = vehicle player;" \n
+                         "_inVehicle = false;" \n
+                         "" \n
+                         "_waitTime = _defaultWaitTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_Vehicle">*/
+                                class in_Vehicle
+                                {
+                                        itemno = 4;
+                                        priority = 3.000000;
+                                        to="vehicle_data";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_vehicle isEqualTo player)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "max_idle">*/
+                                class max_idle
+                                {
+                                        itemno = 26;
+                                        priority = 2.000000;
+                                        to="pre_exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_maxidle <= 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "local_audio">*/
+                                class local_audio
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="process_data";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_data isEqualTo [])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "no_audio_signal">*/
+                                class no_audio_signal
+                                {
+                                        itemno = 18;
+                                        priority = 0.000000;
+                                        to="pre_exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "vehicle_data">*/
+                class vehicle_data
+                {
+                        name = "vehicle_data";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/"_inVehicle = true;" \n
+                         "_power = (vehicle player) getVariable [""fsh_radio_power"", false];" \n
+                         "" \n
+                         "if (_power) then {" \n
+                         "	_auxMode = _vehicle getVariable [""fsh_radio_auxMode"", false];" \n
+                         "" \n
+                         "	_variable = if (_auxMode) then {""fsh_radio_auxAudio""} else {""fsh_radio_audioData""};" \n
+                         "" \n
+                         "	_data = _vehicle getVariable [_variable, ["""","""",0,0]];" \n
+                         "" \n
+                         "	_connection = _vehicle getVariable [""fsh_radio_auxConnect"", objNull]; " \n
+                         "" \n
+                         "	if (_connection isequalTo player) then {" \n
+                         "		//Make sure we still have a device that can connect" \n
+                         "		if (!(call fsh_radio_fnc_hasAudioDevice)) then {" \n
+                         "			_vehicle setVariable [""fsh_radio_auxConnect"", objNull, true]; " \n
+                         "			_vehicle setVariable [""fsh_radio_auxAudio"", ["""","""",0,0], true]; " \n
+                         "			hint ""Connection lost"";" \n
+                         "		};" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 6;
+                                        priority = 1.000000;
+                                        to="process_data";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "stop_music">*/
+                class stop_music
+                {
+                        name = "stop_music";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"if (call cba_fnc_isMusicPlaying) then {" \n
+                         "	call cba_fnc_stopMusic; " \n
+                         "};" \n
+                         "" \n
+                         "_lastState = ""no music"";" \n
+                         "" \n
+                         "if (!_inVehicle) then {_maxidle = _maxidle - 1;};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_sync">*/
+                                class in_sync
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="twiddle_thumbs";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "twiddle_thumbs">*/
+                class twiddle_thumbs
+                {
+                        name = "twiddle_thumbs";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"_time = CBA_missionTime;" \n
+                         "//hintSilent format[""%1: %2"", _loop, _lastState];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "wait">*/
+                                class wait
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="start";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(CBA_missionTime - _time) >= _waitTime || " \n
+                                         "fsh_radio_client_audioUpdate"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "get_player__musi">*/
+                class get_player__musi
+                {
+                        name = "get_player__musi";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"_clientData = [] call CBA_fnc_getMusicPlaying;" \n
+                         "_clientData params [" \n
+                         "	[""_clientTrack"","""",[""""]], " \n
+                         "	[""_clientTrackTime"",-1,[0]]" \n
+                         "];" \n
+                         "" \n
+                         "_clientServerDifference = abs(_clientTrackTime - _trackTime);" \n
+                         "_lastState = ""music is up to date"";" \n
+                         "" \n
+                         "" \n
+                         "if (!(musicVolume isEqualto fsh_radio_volume)) then {" \n
+                         "	if (fsh_radio_ace) then {" \n
+                         "		//[""fsh_radio"", fsh_radio_volume, true] call ace_common_fnc_setHearingCapability;" \n
+                         "	} else {" \n
+                         "		0.2 fadeMusic fsh_radio_volume;" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "out_of_sync">*/
+                                class out_of_sync
+                                {
+                                        itemno = 12;
+                                        priority = 2.000000;
+                                        to="update_music_pla";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_clientServerDifference > 0.1 || !(_track isEqualTo _clientTrack)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "in_sync">*/
+                                class in_sync
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="twiddle_thumbs";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "update_music_pla">*/
+                class update_music_pla
+                {
+                        name = "update_music_pla";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"_playing = [_track, _trackTime, true] call cba_fnc_playMusic;" \n
+                         "" \n
+                         "_lastState = ""updating music"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "failed__play">*/
+                                class failed__play
+                                {
+                                        itemno = 29;
+                                        priority = 1.000000;
+                                        to="checks";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_playing"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "in_sync">*/
+                                class in_sync
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="twiddle_thumbs";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "process_data">*/
+                class process_data
+                {
+                        name = "process_data";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"_ret = _data call fsh_radio_client_fnc_getAudioData;" \n
+                         "" \n
+                         "_ret params [" \n
+                         "	[""_track"","""",[""""]], " \n
+                         "	[""_trackTime"",-1,[0]]," \n
+                         "	[""_timeLeft"",1,[0]]" \n
+                         "];" \n
+                         "" \n
+                         "_waitTime = if (_inVehicle) then {_vehicleWaitTime} else {_defaultWaitTime};" \n
+                         "//{(_timeLeft * 0.95) max 1};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "no_music">*/
+                                class no_music
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="stop_music";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "has_music">*/
+                                class has_music
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="pre_checks";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_track isEqualTo """")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "exit">*/
+                class exit
+                {
+                        name = "exit";
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "post_init">*/
+                class post_init
+                {
+                        name = "post_init";
+                        itemno = 21;
+                        init = /*%FSM<STATEINIT""">*/"fsh_radio_client_receiving = true;" \n
+                         "_waitTime = _vehicleWaitTime;" \n
+                         "_loop = 0;" \n
+                         "_maxIdle = _maxIdleLimmit;" \n
+                         "_lastState = ""audio init"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_sync">*/
+                                class in_sync
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="twiddle_thumbs";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "pre_exit">*/
+                class pre_exit
+                {
+                        name = "pre_exit";
+                        itemno = 24;
+                        init = /*%FSM<STATEINIT""">*/"fsh_radio_client_receiving = false;" \n
+                         "" \n
+                         "if (call cba_fnc_isMusicPlaying) then {" \n
+                         "	call cba_fnc_stopMusic; " \n
+                         "};" \n
+                         "" \n
+                         "//hintSilent format[""%1: Exit"", _loop];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Settings">*/
+                class Settings
+                {
+                        name = "Settings";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/"_vehicleWaitTime = 1;" \n
+                         "_defaultWaitTime = 3;" \n
+                         "_maxIdleLimmit = 5;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 22;
+                                        priority = 0.000000;
+                                        to="post_init";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "clear_data">*/
+                class clear_data
+                {
+                        name = "clear_data";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/"_data = ["""","""",-1,-1];" \n
+                         "_data call FSH_fnc_setPlayerAudio;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_sync">*/
+                                class in_sync
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="twiddle_thumbs";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "checks">*/
+                class checks
+                {
+                        name = "checks";
+                        itemno = 31;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "IS_LOCAL_">*/
+                                class IS_LOCAL_
+                                {
+                                        itemno = 32;
+                                        priority = 1.000000;
+                                        to="play_next__song";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_data select 0) isEqualto ""local"" &&" \n
+                                         "!(fsh_radio_q  isEqualto []) && " \n
+                                         "(" \n
+                                         "	(fsh_radio_qi + 1) < (count fsh_radio_q) ||" \n
+                                         "	(" \n
+                                         "		(fsh_radio_qi) < (count fsh_radio_q) && fsh_radio_shuffle" \n
+                                         "	)" \n
+                                         ")" \n
+                                         "	" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "default">*/
+                                class default
+                                {
+                                        itemno = 34;
+                                        priority = 0.000000;
+                                        to="clear_data";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "play_next__song">*/
+                class play_next__song
+                {
+                        name = "play_next__song";
+                        itemno = 33;
+                        init = /*%FSM<STATEINIT""">*/"_song = selectRandom fsh_radio_q;" \n
+                         "" \n
+                         "if (!fsh_radio_shuffle) then {" \n
+                         "	fsh_radio_qi = fsh_radio_qi + 1;" \n
+                         "	_song = fsh_radio_q select fsh_radio_qi;" \n
+                         "};" \n
+                         "" \n
+                         "_data set [1, _song];" \n
+                         "_data set [2, cba_missionTime];" \n
+                         "_data set [3, ([_song,""duration"", 4] call cba_fnc_getMusicData)];" \n
+                         "_data call FSH_fnc_setPlayerAudio;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "in_sync">*/
+                                class in_sync
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="twiddle_thumbs";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "exit",
+        };
+};
+/*%FSM</COMPILE>*/

@@ -1,0 +1,99 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, broadcast">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-180.109085,-120.338608,-90.109085,-70.338608,0.000000,"init"};
+item1[] = {"true",8,218,-50.924774,-122.823471,39.075226,-72.823471,0.000000,"true"};
+item2[] = {"choose_track",2,4346,76.709686,-118.955750,166.709717,-68.955750,0.000000,"choose" \n "track"};
+item3[] = {"track_finished",4,218,82.511261,-226.607056,172.511261,-176.607025,2.000000,"track" \n "finished"};
+item4[] = {"null",2,250,227.550385,-225.317795,317.550415,-175.317795,0.000000,"null"};
+item5[] = {"true",8,218,228.839691,-120.244926,318.839691,-70.244934,0.000000,"true"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,5};
+link3[] = {3,2};
+link4[] = {4,3};
+link5[] = {5,4};
+globals[] = {0.000000,0,0,0,0,640,480,1,12,6316128,1,-326.176849,578.867432,191.750336,-378.736969,968,885,1};
+window[] = {2,-1,-1,-1,-1,841,188,1628,81,3,986};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "broadcast";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="choose_track";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "choose_track">*/
+                class choose_track
+                {
+                        name = "choose_track";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"_finishTime = _this call FSH_radio_server_fnc_newTrack;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="null";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "null">*/
+                class null
+                {
+                        name = "null";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "track_finished">*/
+                                class track_finished
+                                {
+                                        itemno = 3;
+                                        priority = 2.000000;
+                                        to="choose_track";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"CBA_missionTime >= _finishTime"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+        };
+};
+/*%FSM</COMPILE>*/
